@@ -1,0 +1,49 @@
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="Ejercicio20.Ejercicio20.controller.Secondary" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+
+		
+				<Page id="page" title="{i18n>title}" showNavButton="true"  navButtonPress="onBack" >
+					<form:SimpleForm >
+
+                    
+                    <Title text="ID de la Orden  {modelOrder>/OrderID}" titleStyle="H2"></Title>
+                    <Label text= "{i18n>customerID}"></Label>
+                    <Text text="{modelOrder>/CustomerID}"></Text>
+				    <Label text= "{i18n>idEmpleados}"></Label>
+                
+                     <Text text="{modelOrder>/EmployeeID}"></Text>
+				
+                <Label text="{i18n>freight}"></Label>
+                     <Text text="{modelOrder>/Freight}"></Text>
+				
+               <Label text="{i18n>orderDate}"></Label>
+                     <Text text="{path:'modelOrder>/OrderDate' , formatter:'.Format.formatDate'}"></Text>
+				
+               <Label text="{i18n>requiredDate}"></Label>
+                     <Text text="{path:'modelOrder>/RequiredDate' , formatter:'.Format.formatDate'}"/>
+
+                       <Label text="{i18n>ShipAdress}"></Label>
+                     <Text text="{modelOrder>/ShipAddress}"/>
+
+                       <Label text="{i18n>ShipCity}"></Label>
+                     <Text text="{modelOrder>/ShipCity}"/>
+
+                     <Label text="{i18n>ShipCountry}"></Label>
+                     <Text text="{modelOrder>/ShipCountry}"/>
+
+                     <Label text="{i18n>ShipName}"></Label>
+                     <Text text="{modelOrder>/ShipName}"/>
+
+                      <Label text="{i18n>ShipPostalCode}"></Label>
+                     <Text text="{modelOrder>/ShipPostalCode}"/>
+
+                      <Label text="{i18n>ShipVia}"></Label>
+                     <Text text="{modelOrder>/ShipVia}"/>
+
+                      <Label text="{i18n>ShippedDate}"></Label>
+                     <Text text="{path:'modelOrder>/ShippedDate' , formatter:'.Format.formatDate'}"/>
+
+                     </form:SimpleForm>
+				</Page>
+		
+		
+</mvc:View>

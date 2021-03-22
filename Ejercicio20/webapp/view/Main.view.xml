@@ -1,0 +1,60 @@
+<mvc:View controllerName="Ejercicio20.Ejercicio20.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core">
+
+		
+				<Page id="page" title="{i18n>title}">
+					<Table id="idProductsTable"
+		
+		items="{modelOrders>/value}">
+		
+		<infoToolbar>
+			<OverflowToolbar>
+				<Label text="Wide range of available products"/>
+			</OverflowToolbar>
+		</infoToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="{i18n>orderID}" />
+			</Column>
+			<Column
+				>
+				<Text text="{i18n>productID}" />
+			</Column>
+			<Column					
+				>
+				<Text text="{i18n>unitPrice}" />
+			</Column>
+			<Column
+				
+				
+				>
+				<Text text="{i18n>quantity}" />
+			</Column>
+			<Column>
+				<Text text="{i18n>discount}"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem press="pressItem" type="Active" >
+				<cells>
+                    <Text text="{modelOrders>OrderID}"></Text>
+				</cells>
+                <cells>
+                     <Text text="{modelOrders>ProductID}"></Text>
+				</cells>
+                <cells>
+                     <Text text="{modelOrders>UnitPrice}"></Text>
+				</cells>
+                <cells>
+                     <Text text="{modelOrders>Quantity}"></Text>
+				</cells>
+                <cells>
+                     <Text text="{path:'modelOrders>Discount',formatter:'.Format.formatDesc'}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+				</Page>
+		
+		
+</mvc:View>
